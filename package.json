@@ -10,9 +10,11 @@
     "build": "parcel build src/index.html",
     "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
   },
-
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.37.0"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
