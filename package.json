@@ -7,7 +7,8 @@
   "homepage": "https://batuhawk.github.io",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "deploy": "rm -rf dist/ && npm run build && gh-pages -d dist"
   },
 
   "devDependencies": {
