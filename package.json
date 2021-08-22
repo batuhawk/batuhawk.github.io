@@ -1,0 +1,17 @@
+{
+  "name": "batuhawk.github.io",
+  "version": "1.0.0",
+  "author": "Batuhan Bas",
+  "description": "Yo! This is my portfolio.",
+  "license": "MIT",
+  "homepage": "https://batuhawk.github.io",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.37.0"
+  }
+}

@@ -1,0 +1,142 @@
+:root {
+    /* Font Family */
+    --font-family: 'Michroma', sans-serif;
+
+    /* Colors */
+    --black: #000;
+    --white: #FFF;
+    --grey: #707070;
+}
+
+/* Media Query */
+$max-mobile: 480px;    /* Max Mobile */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+@font-face {
+    font-family: 'Michroma';
+    src: url(../fonts/Michroma-Regular.ttf), format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: var(--black);
+    font-family: var(--font-family);
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    height: 250px;
+    max-width: 600px;
+    width: 100%;
+    padding: 25px;
+    border: 5px solid var(--white);
+    border-radius: 25px;
+    transition: 0.3s;
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: 30px 30px var(--white);
+    }
+
+    &__image {
+        position: relative;
+        height: 100%;
+        width: 75%;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            height: 100%; 
+        }
+    }
+
+    &__information {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+
+        &__description {
+            position: relative;
+            width: 100%;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            p {
+                font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (2560 - 320)));
+                line-height: 46px;
+                color: var(--white);
+            }
+        }
+
+        &__contact {
+            position: relative;
+            width: 100%;
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: row;
+
+            a {
+                color: var(--white);
+                font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (2560 - 320)));
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: var(--grey);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $max-mobile) {
+    .card {
+        justify-content: center;
+        flex-direction: column;
+
+        height: 500px;
+
+        &__image {
+            justify-content: center;
+            height: 250px;
+        }
+    }
+}
